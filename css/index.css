@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -49,6 +49,8 @@ table {
 
 * {
     box-sizing: border-box;
+    border: 1px solid grey;
+    color: rgb(225, 239, 230);
 }
 
 html {
@@ -91,6 +93,37 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+}
+header h1 a{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 7.5rem;
+    width: 100%;
+    justify-content: center;
+}
+header div {
+    background: rgb(0, 4, 17, .8);
+    background-color: rgb(0, 4, 17, .8);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav .navlinks{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 0 5%;
 }
 
 /* spacers */
@@ -107,11 +140,25 @@ header {
 
 /* gallery section */
 .gallery {
-    width: 100%;
-    height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
+    max-width: 100%;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.foodimg {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 90%;
+}
+
 
 /* about us section */
 .about {
@@ -191,15 +238,88 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background: rgb(0, 4, 17);
+    display: flex;
+    flex-direction: column;
 }
+.mailus {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+width: 100%;
+height: 5rem;
+justify-content: space-around;
+}
+.mailus h4 {
+    display: flex;
+    width: 30%;
+    font-size: 4rem;
+    justify-content: center;
+    
+}
+.footlinks {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-evenly;   
+}
+footer .mailbutton{
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    height: 3rem;
+    margin-top: 4px;
+    
+}
+footer input {
+width: auto;
+font-size: 2.5rem;
+}
+footer button {
+    width: 11rem;
+    font-size: 2rem;
+    color: black;
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 8%;
+}
+.copyright p{
+    font-size: 1.4rem;
+    
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    header h1 a{
+        margin: auto;
+        font-size: 4rem;
+        width: 70%;
+    }
+    nav .navlinks{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0 100%;
+    }
 
     /* gallery section */
     .gallery {
@@ -246,8 +366,48 @@ footer {
 
     /* footer section */
     footer {
-        height: auto;
+        max-width: 100%;
+        height: 40rem;
+        width: 100%;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-flow: column nowrap; 
+    }
+    .mailus {
+        width: 100%;
+        gap: 0 100%;
+        flex-wrap: wrap;
+
+    }
+    .mailus h4 {
+        display: flex;
+        width: 100%;
+        font-size: 3rem;
+        justify-content: center;
+        margin-bottom: 20% ;
+        
+    }
+    .mailbutton {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    footer input {
+        
+        width: auto;
+        margin:0  100rem;
+    }
+    footer button {
+        width: 40rem;
+    }
+    .footlinks {
+        width: 100%;
+        gap: 0 100%;
+    }
+    .copyright {
+        align-items: flex-end;
     }
 }
